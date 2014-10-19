@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5486596D19D61EA3000DB038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5486596C19D61EA3000DB038 /* AppDelegate.swift */; };
-		5486596F19D61EA3000DB038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5486596E19D61EA3000DB038 /* ViewController.swift */; };
 		5486597219D61EA3000DB038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5486597019D61EA3000DB038 /* Main.storyboard */; };
 		5486597419D61EA4000DB038 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5486597319D61EA4000DB038 /* Images.xcassets */; };
 		5486598019D61EA4000DB038 /* rottenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5486597F19D61EA4000DB038 /* rottenTests.swift */; };
+		5486598A19D61EC7000DB038 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5486598919D61EC7000DB038 /* MoviesViewController.swift */; };
+		5486598C19D626E3000DB038 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5486598B19D626E3000DB038 /* MovieCell.swift */; };
+		CA316F2FD06A4BC29A3E7566 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E98781C44BEB43EC802E7BEC /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +27,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		543297F519DDF0E50071E4DC /* rotten-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rotten-Bridging-Header.h"; sourceTree = "<group>"; };
 		5486596719D61EA3000DB038 /* rotten.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rotten.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5486596B19D61EA3000DB038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5486596C19D61EA3000DB038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5486596E19D61EA3000DB038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5486597119D61EA3000DB038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5486597319D61EA4000DB038 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5486597919D61EA4000DB038 /* rottenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rottenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5486597E19D61EA4000DB038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5486597F19D61EA4000DB038 /* rottenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rottenTests.swift; sourceTree = "<group>"; };
+		5486598919D61EC7000DB038 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		5486598B19D626E3000DB038 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		5AF9136753034168806552FF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E98781C44BEB43EC802E7BEC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA316F2FD06A4BC29A3E7566 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DB61CF8303749AD8AB77109 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E98781C44BEB43EC802E7BEC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5486595E19D61EA3000DB038 = {
 			isa = PBXGroup;
 			children = (
 				5486596919D61EA3000DB038 /* rotten */,
 				5486597C19D61EA4000DB038 /* rottenTests */,
 				5486596819D61EA3000DB038 /* Products */,
+				5AF9136753034168806552FF /* Pods.xcconfig */,
+				1DB61CF8303749AD8AB77109 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,11 +92,13 @@
 		5486596919D61EA3000DB038 /* rotten */ = {
 			isa = PBXGroup;
 			children = (
+				5486598919D61EC7000DB038 /* MoviesViewController.swift */,
+				5486598B19D626E3000DB038 /* MovieCell.swift */,
 				5486596C19D61EA3000DB038 /* AppDelegate.swift */,
-				5486596E19D61EA3000DB038 /* ViewController.swift */,
 				5486597019D61EA3000DB038 /* Main.storyboard */,
 				5486597319D61EA4000DB038 /* Images.xcassets */,
 				5486596A19D61EA3000DB038 /* Supporting Files */,
+				543297F519DDF0E50071E4DC /* rotten-Bridging-Header.h */,
 			);
 			path = rotten;
 			sourceTree = "<group>";
@@ -116,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5486598319D61EA4000DB038 /* Build configuration list for PBXNativeTarget "rotten" */;
 			buildPhases = (
+				C603970A77914C53B13D6AD4 /* Check Pods Manifest.lock */,
 				5486596319D61EA3000DB038 /* Sources */,
 				5486596419D61EA3000DB038 /* Frameworks */,
 				5486596519D61EA3000DB038 /* Resources */,
+				8B4358ACB931435286DD511B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,13 +224,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B4358ACB931435286DD511B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C603970A77914C53B13D6AD4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5486596319D61EA3000DB038 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5486596F19D61EA3000DB038 /* ViewController.swift in Sources */,
 				5486596D19D61EA3000DB038 /* AppDelegate.swift in Sources */,
+				5486598A19D61EC7000DB038 /* MoviesViewController.swift in Sources */,
+				5486598C19D626E3000DB038 /* MovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,23 +377,30 @@
 		};
 		5486598419D61EA4000DB038 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF9136753034168806552FF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = rotten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rotten/rotten-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5486598519D61EA4000DB038 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF9136753034168806552FF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = rotten/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rotten/rotten-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -395,6 +457,7 @@
 				5486598519D61EA4000DB038 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5486598619D61EA4000DB038 /* Build configuration list for PBXNativeTarget "rottenTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +466,7 @@
 				5486598819D61EA4000DB038 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

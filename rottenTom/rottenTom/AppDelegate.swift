@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  rotten
+//  rottenTom
 //
-//  Created by Dianna on 9/26/14.
+//  Created by Dianna on 10/2/14.
 //  Copyright (c) 2014 dianna. All rights reserved.
 //
 
@@ -13,16 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
 
+
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
         
-        // var navigationBarAppearace = UINavigationBar.appearance()
+        var navigationBarAppearace = UINavigationBar.appearance()
         
-       // navigationBarAppearace.tintColor = uicolorFromHex(0x2882ff)
-        // navigationBarAppearace.barTintColor = uicolorFromHex(0xabcdef)
+        navigationBarAppearace.tintColor = uicolorFromHex(0x2882ff)
+        navigationBarAppearace.barTintColor = uicolorFromHex(0xabcdef)
         
         // change navigation item title color
-        // navigationBarAppearace.titleTextAttributes =[NSForegroundColorAttributeName:UIColor.whiteColor()]
+        navigationBarAppearace.titleTextAttributes =[NSForegroundColorAttributeName:UIColor.whiteColor()]
         
         return true
     }
